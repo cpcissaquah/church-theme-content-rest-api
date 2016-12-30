@@ -111,7 +111,7 @@ class Church_Theme_Content_Rest_Api_Public {
 	 * @since 0.1
 	 */
 	function ctc_enable_sermon_rest_api( $args ) {
-		$post_type = 'sermon'
+		$post_type = 'sermon';
 		
 		if(isset($this->plugin_options[$post_type]) && !empty($this->plugin_options[$post_type])) {
 	    	$args['show_in_rest'] = true;
@@ -132,7 +132,7 @@ class Church_Theme_Content_Rest_Api_Public {
 	 * @since 0.1
 	 */
 	function ctc_enable_event_rest_api( $args ) {
-	    $post_type = 'event'
+	    $post_type = 'event';
 		
 		if(isset($this->plugin_options[$post_type]) && !empty($this->plugin_options[$post_type])) {
 	    	$args['show_in_rest'] = true;
@@ -153,7 +153,7 @@ class Church_Theme_Content_Rest_Api_Public {
 	 * @since 0.1
 	 */
 	function ctc_enable_location_rest_api( $args ) {
-	    $post_type = 'location'
+	    $post_type = 'location';
 		
 		if(isset($this->plugin_options[$post_type]) && !empty($this->plugin_options[$post_type])) {
 	    	$args['show_in_rest'] = true;
@@ -174,7 +174,7 @@ class Church_Theme_Content_Rest_Api_Public {
 	 * @since 0.1
 	 */
 	function ctc_enable_person_rest_api( $args ) {
-	    $post_type = 'person'
+	    $post_type = 'person';
 		
 		if(isset($this->plugin_options[$post_type]) && !empty($this->plugin_options[$post_type])) {
 	    	$args['show_in_rest'] = true;
