@@ -9,3 +9,6 @@ The following links were immensely useful in building this plugin:
 * An example of how to extend the Church Theme Content plugin:  [https://gist.github.com/stevengliebe/2b26a1862854c28b3d07](https://gist.github.com/stevengliebe/2b26a1862854c28b3d07).
 * A reference to how the REST API has been used by someone else in the past:  [https://github.com/churchthemes/church-theme-content/issues/13](https://github.com/churchthemes/church-theme-content/issues/13)
 * A tutorial for how to manage a wordpress plugin using github:  [http://jeremypry.com/wordpress-plugin-development-with-github/](http://jeremypry.com/wordpress-plugin-development-with-github/)
+* A tutorial for creating a wordpress plugin:
+    * [https://scotch.io/tutorials/how-to-build-a-wordpress-plugin-part-1](https://scotch.io/tutorials/how-to-build-a-wordpress-plugin-part-1)
+    * [https://scotch.io/tutorials/how-to-build-a-wordpress-plugin-part-2](https://scotch.io/tutorials/how-to-build-a-wordpress-plugin-part-2)
