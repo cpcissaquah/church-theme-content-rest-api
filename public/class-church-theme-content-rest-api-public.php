@@ -111,7 +111,13 @@ class Church_Theme_Content_Rest_Api_Public {
 	 * @since 0.1
 	 */
 	function ctc_enable_sermon_rest_api( $args ) {
-	    $args['show_in_rest'] = true;
+		$post_type = 'sermon'
+		
+		if(isset($this->plugin_options[$post_type]) && !empty($this->plugin_options[$post_type])) {
+	    	$args['show_in_rest'] = true;
+	    } else {
+	    	$args['show_in_rest'] = false;
+	    }
 
 	    return $args;
 	}
@@ -126,7 +132,13 @@ class Church_Theme_Content_Rest_Api_Public {
 	 * @since 0.1
 	 */
 	function ctc_enable_event_rest_api( $args ) {
-	    $args['show_in_rest'] = true;
+	    $post_type = 'event'
+		
+		if(isset($this->plugin_options[$post_type]) && !empty($this->plugin_options[$post_type])) {
+	    	$args['show_in_rest'] = true;
+	    } else {
+	    	$args['show_in_rest'] = false;
+	    }
 
 	    return $args;
 	}
@@ -141,7 +153,13 @@ class Church_Theme_Content_Rest_Api_Public {
 	 * @since 0.1
 	 */
 	function ctc_enable_location_rest_api( $args ) {
-	    $args['show_in_rest'] = true;
+	    $post_type = 'location'
+		
+		if(isset($this->plugin_options[$post_type]) && !empty($this->plugin_options[$post_type])) {
+	    	$args['show_in_rest'] = true;
+	    } else {
+	    	$args['show_in_rest'] = false;
+	    }
 
 	    return $args;
 	}
@@ -156,7 +174,13 @@ class Church_Theme_Content_Rest_Api_Public {
 	 * @since 0.1
 	 */
 	function ctc_enable_person_rest_api( $args ) {
-	    $args['show_in_rest'] = true;
+	    $post_type = 'person'
+		
+		if(isset($this->plugin_options[$post_type]) && !empty($this->plugin_options[$post_type])) {
+	    	$args['show_in_rest'] = true;
+	    } else {
+	    	$args['show_in_rest'] = false;
+	    }
 
 	    return $args;
 	}
