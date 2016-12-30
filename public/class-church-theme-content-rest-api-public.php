@@ -51,6 +51,7 @@ class Church_Theme_Content_Rest_Api_Public {
 
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
+        $this->plugin_options = get_option($this->plugin_name);
 
 	}
 
@@ -98,6 +99,66 @@ class Church_Theme_Content_Rest_Api_Public {
 
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/church-theme-content-rest-api-public.js', array( 'jquery' ), $this->version, false );
 
+	}
+
+	/**********************************
+	 * SERMON
+	 **********************************/
+
+	/**
+	 * Enable REST API for sermon post type.
+	 *
+	 * @since 0.1
+	 */
+	function ctc_enable_sermon_rest_api( $args ) {
+	    $args['show_in_rest'] = true;
+
+	    return $args;
+	}
+
+	/**********************************
+	 * EVENT
+	 **********************************/
+
+	/**
+	 * Enable REST API for event post type.
+	 *
+	 * @since 0.1
+	 */
+	function ctc_enable_event_rest_api( $args ) {
+	    $args['show_in_rest'] = true;
+
+	    return $args;
+	}
+
+	/**********************************
+	 * LOCATION
+	 **********************************/
+
+	/**
+	 * Enable REST API for location post type.
+	 *
+	 * @since 0.1
+	 */
+	function ctc_enable_location_rest_api( $args ) {
+	    $args['show_in_rest'] = true;
+
+	    return $args;
+	}
+
+	/**********************************
+	 * PERSON
+	 **********************************/
+
+	/**
+	 * Enable REST API for person post type.
+	 *
+	 * @since 0.1
+	 */
+	function ctc_enable_person_rest_api( $args ) {
+	    $args['show_in_rest'] = true;
+
+	    return $args;
 	}
 
 }

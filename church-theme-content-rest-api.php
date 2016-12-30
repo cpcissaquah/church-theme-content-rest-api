@@ -15,7 +15,7 @@
  * @wordpress-plugin
  * Plugin Name:       Church Theme Content - REST API
  * Plugin URI:        https://github.com/cpcissaquah/church-theme-content-rest-api
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Description:       Extends the Church Theme Content plugin to enable REST API functionality.
  * Version:           1.0.0
  * Author:            joe--cool
  * Author URI:        https://github.com/joe--cool
