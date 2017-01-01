@@ -111,7 +111,7 @@ class Church_Theme_Content_Rest_Api_Public {
      * @since 0.1
      */
     function ctc_enable_sermon_rest_api( $args ) {
-        error_log('Start ctc_enable_sermon_rest_api function')
+        error_log('Start ctc_enable_sermon_rest_api function');
         $post_type = 'sermon';
         
         if(isset($this->plugin_options[$post_type]) && !empty($this->plugin_options[$post_type])) {
@@ -134,7 +134,7 @@ class Church_Theme_Content_Rest_Api_Public {
      * @since 0.1
      */
     function ctc_enable_event_rest_api( $args ) {
-        error_log('Start ctc_enable_event_rest_api function')
+        error_log('Start ctc_enable_event_rest_api function');
         $post_type = 'event';
         
         if(isset($this->plugin_options[$post_type]) && !empty($this->plugin_options[$post_type])) {
@@ -157,7 +157,7 @@ class Church_Theme_Content_Rest_Api_Public {
      * @since 0.1
      */
     function ctc_enable_location_rest_api( $args ) {
-        error_log('Start ctc_enable_location_rest_api function')
+        error_log('Start ctc_enable_location_rest_api function');
         $post_type = 'location';
         
         if(isset($this->plugin_options[$post_type]) && !empty($this->plugin_options[$post_type])) {
@@ -180,7 +180,7 @@ class Church_Theme_Content_Rest_Api_Public {
      * @since 0.1
      */
     function ctc_enable_person_rest_api( $args ) {
-        error_log('Start ctc_enable_location_rest_api function')
+        error_log('Start ctc_enable_location_rest_api function');
         $post_type = 'person';
         
         if(isset($this->plugin_options[$post_type]) && !empty($this->plugin_options[$post_type])) {
