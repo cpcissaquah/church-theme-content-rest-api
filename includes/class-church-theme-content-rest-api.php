@@ -180,7 +180,7 @@ class Church_Theme_Content_Rest_Api {
         // Adding filters
         $this->loader->add_filter( 'ctc_post_type_sermon_args', $plugin_public, 'ctc_enable_sermon_rest_api' );
         $this->loader->add_filter( 'ctc_post_type_event_args', $plugin_public, 'ctc_enable_event_rest_api' );
-        $this->loader->add_filter( 'ctc_location_post_type', $plugin_public, 'ctc_enable_location_rest_api' );
+        $this->loader->add_filter( 'ctc_post_type_location_args', $plugin_public, 'ctc_enable_location_rest_api' );
         $this->loader->add_filter( 'ctc_post_type_person_args', $plugin_public, 'ctc_enable_person_rest_api' );
     }
 
