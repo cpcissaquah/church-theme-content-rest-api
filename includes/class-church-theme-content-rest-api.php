@@ -178,10 +178,12 @@ class Church_Theme_Content_Rest_Api {
         // $this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 
         // Adding filters
+        error_log('Adding filters');
         $this->loader->add_filter( 'ctc_post_type_sermon_args', $plugin_public, 'ctc_enable_sermon_rest_api' );
         $this->loader->add_filter( 'ctc_post_type_event_args', $plugin_public, 'ctc_enable_event_rest_api' );
         $this->loader->add_filter( 'ctc_post_type_location_args', $plugin_public, 'ctc_enable_location_rest_api' );
         $this->loader->add_filter( 'ctc_post_type_person_args', $plugin_public, 'ctc_enable_person_rest_api' );
+        error_log('Added filters');
     }
 
     /**
