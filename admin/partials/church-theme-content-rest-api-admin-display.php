@@ -23,7 +23,6 @@
         <?php
             //Grab all options
             $options  = get_option($this->plugin_name);
-            error_log(print_r($options, true));
             $sermon   = $options['sermon'];
             $event    = $options['event'];
             $location = $options['location'];
@@ -37,7 +36,7 @@
         <fieldset>
             <legend class="screen-reader-text"><span><?php _e('Enable REST API for Sermons', $this->plugin_name);?></span></legend>
             <label for="<?php echo $this->plugin_name; ?>-sermon">
-                <input type="checkbox" id="<?php echo $this->plugin_name; ?>-sermon" name="<?php echo $this->plugin_name; ?> [sermon]" value="1" <?php checked($sermon, 0); ?> />
+                <input type="checkbox" id="<?php echo $this->plugin_name; ?>-sermon" name="<?php echo $this->plugin_name; ?> [sermon]" value="1" <?php checked($sermon, 1); ?> />
                 <span><?php esc_attr_e('Enable REST API for Sermons', $this->plugin_name); ?></span>
             </label>
         </fieldset>
@@ -46,7 +45,7 @@
         <fieldset>
             <legend class="screen-reader-text"><span><?php _e('Enable REST API for Events', $this->plugin_name);?></span></legend>
             <label for="<?php echo $this->plugin_name; ?>-event">
-                <input type="checkbox" id="<?php echo $this->plugin_name; ?>-event" name="<?php echo $this->plugin_name; ?> [event]" value="1" <?php checked($event, 0); ?> />
+                <input type="checkbox" id="<?php echo $this->plugin_name; ?>-event" name="<?php echo $this->plugin_name; ?> [event]" value="1" <?php checked($event, 1); ?> />
                 <span><?php esc_attr_e('Enable REST API for Events', $this->plugin_name); ?></span>
             </label>
         </fieldset>
@@ -55,7 +54,7 @@
         <fieldset>
             <legend class="screen-reader-text"><span><?php _e('Enable REST API for Locations', $this->plugin_name);?></span></legend>
             <label for="<?php echo $this->plugin_name; ?>-location">
-                <input type="checkbox" id="<?php echo $this->plugin_name; ?>-location" name="<?php echo $this->plugin_name; ?> [location]" value="1" <?php checked($location, 0); ?> />
+                <input type="checkbox" id="<?php echo $this->plugin_name; ?>-location" name="<?php echo $this->plugin_name; ?> [location]" value="1" <?php checked($location, 1); ?> />
                 <span><?php esc_attr_e('Enable REST API for Locations', $this->plugin_name); ?></span>
             </label>
         </fieldset>
@@ -64,7 +63,7 @@
         <fieldset>
             <legend class="screen-reader-text"><span><?php _e('Enable REST API for People', $this->plugin_name);?></span></legend>
             <label for="<?php echo $this->plugin_name; ?>-people">
-                <input type="checkbox" id="<?php echo $this->plugin_name; ?>-people" name="<?php echo $this->plugin_name; ?> [people]" value="1" <?php checked($people, 0); ?> />
+                <input type="checkbox" id="<?php echo $this->plugin_name; ?>-people" name="<?php echo $this->plugin_name; ?> [people]" value="1" <?php checked($people, 1); ?> />
                 <span><?php esc_attr_e('Enable REST API for People', $this->plugin_name); ?></span>
             </label>
         </fieldset>
