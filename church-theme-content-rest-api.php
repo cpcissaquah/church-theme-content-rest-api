@@ -27,7 +27,7 @@
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
-	die;
+    die;
 }
 
 /**
@@ -35,8 +35,8 @@ if ( ! defined( 'WPINC' ) ) {
  * This action is documented in includes/class-church-theme-content-rest-api-activator.php
  */
 function activate_church_theme_content_rest_api() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-church-theme-content-rest-api-activator.php';
-	Church_Theme_Content_Rest_Api_Activator::activate();
+    require_once plugin_dir_path( __FILE__ ) . 'includes/class-church-theme-content-rest-api-activator.php';
+    Church_Theme_Content_Rest_Api_Activator::activate();
 }
 
 /**
@@ -44,8 +44,8 @@ function activate_church_theme_content_rest_api() {
  * This action is documented in includes/class-church-theme-content-rest-api-deactivator.php
  */
 function deactivate_church_theme_content_rest_api() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-church-theme-content-rest-api-deactivator.php';
-	Church_Theme_Content_Rest_Api_Deactivator::deactivate();
+    require_once plugin_dir_path( __FILE__ ) . 'includes/class-church-theme-content-rest-api-deactivator.php';
+    Church_Theme_Content_Rest_Api_Deactivator::deactivate();
 }
 
 register_activation_hook( __FILE__, 'activate_church_theme_content_rest_api' );
@@ -68,8 +68,8 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-church-theme-content-rest-
  */
 function run_church_theme_content_rest_api() {
 
-	$plugin = new Church_Theme_Content_Rest_Api();
-	$plugin->run();
+    $plugin = new Church_Theme_Content_Rest_Api();
+    $plugin->run();
 
 }
 run_church_theme_content_rest_api();

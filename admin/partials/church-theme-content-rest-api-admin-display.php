@@ -20,7 +20,7 @@
     
     <form method="post" name="rest_api_options" action="options.php">
 
-    	<?php
+        <?php
             //Grab all options
             $options  = get_option($this->plugin_name);
             $sermon   = $options['sermon'];

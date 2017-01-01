@@ -22,167 +22,167 @@
  */
 class Church_Theme_Content_Rest_Api_Public {
 
-	/**
-	 * The ID of this plugin.
-	 *
-	 * @since    1.0.0
-	 * @access   private
-	 * @var      string    $plugin_name    The ID of this plugin.
-	 */
-	private $plugin_name;
+    /**
+     * The ID of this plugin.
+     *
+     * @since    1.0.0
+     * @access   private
+     * @var      string    $plugin_name    The ID of this plugin.
+     */
+    private $plugin_name;
 
-	/**
-	 * The version of this plugin.
-	 *
-	 * @since    1.0.0
-	 * @access   private
-	 * @var      string    $version    The current version of this plugin.
-	 */
-	private $version;
+    /**
+     * The version of this plugin.
+     *
+     * @since    1.0.0
+     * @access   private
+     * @var      string    $version    The current version of this plugin.
+     */
+    private $version;
 
-	/**
-	 * Initialize the class and set its properties.
-	 *
-	 * @since    1.0.0
-	 * @param      string    $plugin_name       The name of the plugin.
-	 * @param      string    $version    The version of this plugin.
-	 */
-	public function __construct( $plugin_name, $version ) {
+    /**
+     * Initialize the class and set its properties.
+     *
+     * @since    1.0.0
+     * @param      string    $plugin_name       The name of the plugin.
+     * @param      string    $version    The version of this plugin.
+     */
+    public function __construct( $plugin_name, $version ) {
 
-		$this->plugin_name = $plugin_name;
-		$this->version = $version;
+        $this->plugin_name = $plugin_name;
+        $this->version = $version;
         $this->plugin_options = get_option($this->plugin_name);
 
-	}
+    }
 
-	/**
-	 * Register the stylesheets for the public-facing side of the site.
-	 *
-	 * @since    1.0.0
-	 */
-	public function enqueue_styles() {
+    /**
+     * Register the stylesheets for the public-facing side of the site.
+     *
+     * @since    1.0.0
+     */
+    public function enqueue_styles() {
 
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Church_Theme_Content_Rest_Api_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Church_Theme_Content_Rest_Api_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
+        /**
+         * This function is provided for demonstration purposes only.
+         *
+         * An instance of this class should be passed to the run() function
+         * defined in Church_Theme_Content_Rest_Api_Loader as all of the hooks are defined
+         * in that particular class.
+         *
+         * The Church_Theme_Content_Rest_Api_Loader will then create the relationship
+         * between the defined hooks and the functions defined in this
+         * class.
+         */
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/church-theme-content-rest-api-public.css', array(), $this->version, 'all' );
+        wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/church-theme-content-rest-api-public.css', array(), $this->version, 'all' );
 
-	}
+    }
 
-	/**
-	 * Register the JavaScript for the public-facing side of the site.
-	 *
-	 * @since    1.0.0
-	 */
-	public function enqueue_scripts() {
+    /**
+     * Register the JavaScript for the public-facing side of the site.
+     *
+     * @since    1.0.0
+     */
+    public function enqueue_scripts() {
 
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Church_Theme_Content_Rest_Api_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Church_Theme_Content_Rest_Api_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
+        /**
+         * This function is provided for demonstration purposes only.
+         *
+         * An instance of this class should be passed to the run() function
+         * defined in Church_Theme_Content_Rest_Api_Loader as all of the hooks are defined
+         * in that particular class.
+         *
+         * The Church_Theme_Content_Rest_Api_Loader will then create the relationship
+         * between the defined hooks and the functions defined in this
+         * class.
+         */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/church-theme-content-rest-api-public.js', array( 'jquery' ), $this->version, false );
+        wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/church-theme-content-rest-api-public.js', array( 'jquery' ), $this->version, false );
 
-	}
+    }
 
-	/**********************************
-	 * SERMON
-	 **********************************/
+    /**********************************
+     * SERMON
+     **********************************/
 
-	/**
-	 * Enable REST API for sermon post type.
-	 *
-	 * @since 0.1
-	 */
-	function ctc_enable_sermon_rest_api( $args ) {
-		$post_type = 'sermon';
-		
-		if(isset($this->plugin_options[$post_type]) && !empty($this->plugin_options[$post_type])) {
-	    	$args['show_in_rest'] = true;
-	    } else {
-	    	$args['show_in_rest'] = false;
-	    }
+    /**
+     * Enable REST API for sermon post type.
+     *
+     * @since 0.1
+     */
+    function ctc_enable_sermon_rest_api( $args ) {
+        $post_type = 'sermon';
+        
+        if(isset($this->plugin_options[$post_type]) && !empty($this->plugin_options[$post_type])) {
+            $args['show_in_rest'] = true;
+        } else {
+            $args['show_in_rest'] = false;
+        }
 
-	    return $args;
-	}
+        return $args;
+    }
 
-	/**********************************
-	 * EVENT
-	 **********************************/
+    /**********************************
+     * EVENT
+     **********************************/
 
-	/**
-	 * Enable REST API for event post type.
-	 *
-	 * @since 0.1
-	 */
-	function ctc_enable_event_rest_api( $args ) {
-	    $post_type = 'event';
-		
-		if(isset($this->plugin_options[$post_type]) && !empty($this->plugin_options[$post_type])) {
-	    	$args['show_in_rest'] = true;
-	    } else {
-	    	$args['show_in_rest'] = false;
-	    }
+    /**
+     * Enable REST API for event post type.
+     *
+     * @since 0.1
+     */
+    function ctc_enable_event_rest_api( $args ) {
+        $post_type = 'event';
+        
+        if(isset($this->plugin_options[$post_type]) && !empty($this->plugin_options[$post_type])) {
+            $args['show_in_rest'] = true;
+        } else {
+            $args['show_in_rest'] = false;
+        }
 
-	    return $args;
-	}
+        return $args;
+    }
 
-	/**********************************
-	 * LOCATION
-	 **********************************/
+    /**********************************
+     * LOCATION
+     **********************************/
 
-	/**
-	 * Enable REST API for location post type.
-	 *
-	 * @since 0.1
-	 */
-	function ctc_enable_location_rest_api( $args ) {
-	    $post_type = 'location';
-		
-		if(isset($this->plugin_options[$post_type]) && !empty($this->plugin_options[$post_type])) {
-	    	$args['show_in_rest'] = true;
-	    } else {
-	    	$args['show_in_rest'] = false;
-	    }
+    /**
+     * Enable REST API for location post type.
+     *
+     * @since 0.1
+     */
+    function ctc_enable_location_rest_api( $args ) {
+        $post_type = 'location';
+        
+        if(isset($this->plugin_options[$post_type]) && !empty($this->plugin_options[$post_type])) {
+            $args['show_in_rest'] = true;
+        } else {
+            $args['show_in_rest'] = false;
+        }
 
-	    return $args;
-	}
+        return $args;
+    }
 
-	/**********************************
-	 * PERSON
-	 **********************************/
+    /**********************************
+     * PERSON
+     **********************************/
 
-	/**
-	 * Enable REST API for person post type.
-	 *
-	 * @since 0.1
-	 */
-	function ctc_enable_person_rest_api( $args ) {
-	    $post_type = 'person';
-		
-		if(isset($this->plugin_options[$post_type]) && !empty($this->plugin_options[$post_type])) {
-	    	$args['show_in_rest'] = true;
-	    } else {
-	    	$args['show_in_rest'] = false;
-	    }
+    /**
+     * Enable REST API for person post type.
+     *
+     * @since 0.1
+     */
+    function ctc_enable_person_rest_api( $args ) {
+        $post_type = 'person';
+        
+        if(isset($this->plugin_options[$post_type]) && !empty($this->plugin_options[$post_type])) {
+            $args['show_in_rest'] = true;
+        } else {
+            $args['show_in_rest'] = false;
+        }
 
-	    return $args;
-	}
+        return $args;
+    }
 
 }
