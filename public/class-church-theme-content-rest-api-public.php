@@ -114,12 +114,16 @@ class Church_Theme_Content_Rest_Api_Public {
         error_log('Start ctc_enable_sermon_rest_api function');
         $post_type = 'sermon';
         
+        error_log(print_r($args, true));
         if(isset($this->plugin_options[$post_type]) && !empty($this->plugin_options[$post_type])) {
+            error_log('Enable REST');
             $args['show_in_rest'] = true;
             $args['rest_base']    = "ctc_sermon";
         } else {
+            error_log('Disable REST');
             $args['show_in_rest'] = false;
         }
+        error_log(print_r($args, true));
 
         return $args;
     }
