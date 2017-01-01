@@ -23,7 +23,7 @@
         <?php
             //Grab all options
             $options  = get_option($this->plugin_name);
-            error_log(print_r($options, true))
+            error_log(print_r($options, true));
             $sermon   = $options['sermon'];
             $event    = $options['event'];
             $location = $options['location'];
