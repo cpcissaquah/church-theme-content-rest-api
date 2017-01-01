@@ -23,13 +23,12 @@
         <?php
             //Grab all options
             $options  = get_option($this->plugin_name);
+            error_log(print_r($options, true))
             $sermon   = $options['sermon'];
             $event    = $options['event'];
             $location = $options['location'];
             $people   = $options['people'];
-        ?>
 
-        <?php
             settings_fields($this->plugin_name);
             do_settings_sections($this->plugin_name);
         ?>
