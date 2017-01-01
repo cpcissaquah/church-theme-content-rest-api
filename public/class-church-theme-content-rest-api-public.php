@@ -115,6 +115,7 @@ class Church_Theme_Content_Rest_Api_Public {
         
         if(isset($this->plugin_options[$post_type]) && !empty($this->plugin_options[$post_type])) {
             $args['show_in_rest'] = true;
+            $args['rest_base']    = "ctc_sermon";
         } else {
             $args['show_in_rest'] = false;
         }
@@ -136,6 +137,7 @@ class Church_Theme_Content_Rest_Api_Public {
         
         if(isset($this->plugin_options[$post_type]) && !empty($this->plugin_options[$post_type])) {
             $args['show_in_rest'] = true;
+            $args['rest_base']    = "ctc_event";
         } else {
             $args['show_in_rest'] = false;
         }
@@ -157,6 +159,7 @@ class Church_Theme_Content_Rest_Api_Public {
         
         if(isset($this->plugin_options[$post_type]) && !empty($this->plugin_options[$post_type])) {
             $args['show_in_rest'] = true;
+            $args['rest_base']    = "ctc_location";
         } else {
             $args['show_in_rest'] = false;
         }
@@ -178,6 +181,7 @@ class Church_Theme_Content_Rest_Api_Public {
         
         if(isset($this->plugin_options[$post_type]) && !empty($this->plugin_options[$post_type])) {
             $args['show_in_rest'] = true;
+            $args['rest_base']    = "ctc_person";
         } else {
             $args['show_in_rest'] = false;
         }
