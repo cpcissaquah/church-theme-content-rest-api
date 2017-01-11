@@ -108,14 +108,17 @@ class Church_Theme_Content_Rest_Api_Public {
     /**
      * Enable REST API for specified endpoint
      *
-     * @since 0.1
+     * @since 1.0.0
      */
     private function ctc_enable_rest_api($endpoint_type, $rest_base, $args ) {
+        error_log('Configuring:  ' . $endpoint_type);
 
         if(isset($this->plugin_options[$endpoint_type]) && !empty($this->plugin_options[$endpoint_type])) {
+            error_log('enabled');
             $args['show_in_rest'] = true;
             $args['rest_base']    = $rest_base;
         } else {
+            error_log('disabled');
             $args['show_in_rest'] = false;
         }
 
@@ -129,10 +132,55 @@ class Church_Theme_Content_Rest_Api_Public {
     /**
      * Enable REST API for sermon post type.
      *
-     * @since 0.1
+     * @since 1.0.0
      */
     public function ctc_enable_sermon_rest_api( $args ) {
         return $this->ctc_enable_rest_api('sermon', 'ctc_sermon', $args);
+    }
+
+    /**
+     * Enable REST API for sermon topic.
+     *
+     * @since 1.0.0
+     */
+    public function ctc_enable_sermon_topic_rest_api( $args ) {
+        return $this->ctc_enable_rest_api('sermon_topic', 'ctc_sermon_topic', $args);
+    }
+
+    /**
+     * Enable REST API for sermon book.
+     *
+     * @since 1.0.0
+     */
+    public function ctc_enable_sermon_book_rest_api( $args ) {
+        return $this->ctc_enable_rest_api('sermon_book', 'ctc_sermon_book', $args);
+    }
+
+    /**
+     * Enable REST API for sermon series.
+     *
+     * @since 1.0.0
+     */
+    public function ctc_enable_sermon_series_rest_api( $args ) {
+        return $this->ctc_enable_rest_api('sermon_series', 'ctc_sermon_series', $args);
+    }
+
+    /**
+     * Enable REST API for sermon speaker.
+     *
+     * @since 1.0.0
+     */
+    public function ctc_enable_sermon_speaker_rest_api( $args ) {
+        return $this->ctc_enable_rest_api('sermon_speaker', 'ctc_sermon_speaker', $args);
+    }
+
+    /**
+     * Enable REST API for sermon tag.
+     *
+     * @since 1.0.0
+     */
+    public function ctc_enable_sermon_tag_rest_api( $args ) {
+        return $this->ctc_enable_rest_api('sermon_tag', 'ctc_sermon_tag', $args);
     }
 
     /**********************************
@@ -142,10 +190,19 @@ class Church_Theme_Content_Rest_Api_Public {
     /**
      * Enable REST API for event post type.
      *
-     * @since 0.1
+     * @since 1.0.0
      */
     public function ctc_enable_event_rest_api( $args ) {
         return $this->ctc_enable_rest_api('event', 'ctc_event', $args);
+    }
+
+    /**
+     * Enable REST API for event category.
+     *
+     * @since 1.0.0
+     */
+    public function ctc_enable_event_category_rest_api( $args ) {
+        return $this->ctc_enable_rest_api('event_category', 'ctc_event_category', $args);
     }
 
     /**********************************
@@ -155,7 +212,7 @@ class Church_Theme_Content_Rest_Api_Public {
     /**
      * Enable REST API for location post type.
      *
-     * @since 0.1
+     * @since 1.0.0
      */
     public function ctc_enable_location_rest_api( $args ) {
         return $this->ctc_enable_rest_api('location', 'ctc_location', $args);
@@ -168,10 +225,19 @@ class Church_Theme_Content_Rest_Api_Public {
     /**
      * Enable REST API for person post type.
      *
-     * @since 0.1
+     * @since 1.0.0
      */
     public function ctc_enable_person_rest_api( $args ) {
         return $this->ctc_enable_rest_api('person', 'ctc_person', $args);
+    }
+
+    /**
+     * Enable REST API for person group.
+     *
+     * @since 1.0.0
+     */
+    public function ctc_enable_person_group_rest_api( $args ) {
+        return $this->ctc_enable_rest_api('person_group', 'ctc_person_group', $args);
     }
 
 }

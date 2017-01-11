@@ -167,13 +167,27 @@ class Church_Theme_Content_Rest_Api_Admin {
         // All checkboxes inputs        
         $valid = array();
 
-        //Cleanup
-        $valid['sermon']   = (isset($input['sermon'])   && !empty($input['sermon']))   ? 1 : 0;
-        $valid['event']    = (isset($input['event'])    && !empty($input['event']))    ? 1 : 0;
-        $valid['location'] = (isset($input['location']) && !empty($input['location'])) ? 1 : 0;
-        $valid['people']   = (isset($input['people'])   && !empty($input['people']))   ? 1 : 0;
+        // Sermon
+        $valid['sermon']            = (isset($input['sermon'])          && !empty($input['sermon']))            ? 1 : 0;
+        $valid['sermon_topic']      = (isset($input['sermon_topic'])    && !empty($input['sermon_topic']))      ? 1 : 0;
+        $valid['sermon_book']       = (isset($input['sermon_book'])     && !empty($input['sermon_book']))       ? 1 : 0;
+        $valid['sermon_series']     = (isset($input['sermon_series'])   && !empty($input['sermon_series']))     ? 1 : 0;
+        $valid['sermon_speaker']    = (isset($input['sermon_speaker'])  && !empty($input['sermon_speaker']))    ? 1 : 0;
+        $valid['sermon_tag']        = (isset($input['sermon_tag'])      && !empty($input['sermon_tag']))        ? 1 : 0;
+
+        // Event
+        $valid['event']             = (isset($input['event'])           && !empty($input['event']))             ? 1 : 0;
+        $valid['event_category']    = (isset($input['event_category'])  && !empty($input['event_category']))    ? 1 : 0;
+
+        // Location
+        $valid['location']          = (isset($input['location'])        && !empty($input['location']))          ? 1 : 0;
+
+        // People
+        $valid['person']            = (isset($input['person'])          && !empty($input['person']))            ? 1 : 0;
+        $valid['person_group']      = (isset($input['person_group'])    && !empty($input['person_group']))      ? 1 : 0;
         
         return $valid;
      }
 
 }
+
