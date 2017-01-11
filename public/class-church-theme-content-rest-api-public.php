@@ -52,7 +52,6 @@ class Church_Theme_Content_Rest_Api_Public {
         $this->plugin_name = $plugin_name;
         $this->version = $version;
         $this->plugin_options = get_option($this->plugin_name);
-        error_log(print_r($this->plugin_options, true));
 
     }
 

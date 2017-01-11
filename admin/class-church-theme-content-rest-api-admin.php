@@ -166,8 +166,6 @@ class Church_Theme_Content_Rest_Api_Admin {
     public function validate($input) {
         // All checkboxes inputs        
         $valid = array();
-        error_log('$input:');
-        error_log(print_r($input, true));
 
         //Cleanup
         $valid['sermon']   = (isset($input['sermon'])   && !empty($input['sermon']))   ? 1 : 0;
