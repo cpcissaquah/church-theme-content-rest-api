@@ -182,7 +182,7 @@ class Church_Theme_Content_Rest_Api_Admin {
         // Location
         $valid['location']          = (isset($input['location'])        && !empty($input['location']))          ? 1 : 0;
 
-        // People
+        // Person
         $valid['person']            = (isset($input['person'])          && !empty($input['person']))            ? 1 : 0;
         $valid['person_group']      = (isset($input['person_group'])    && !empty($input['person_group']))      ? 1 : 0;
         
