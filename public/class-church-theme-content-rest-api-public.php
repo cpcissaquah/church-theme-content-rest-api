@@ -111,15 +111,12 @@ class Church_Theme_Content_Rest_Api_Public {
      *
      * @since 0.1
      */
-    public function ctc_enable_rest_api($endpoint_type, $rest_base, $args ) {
-        error_log('Configuring:  ' . $endpoint_type);
+    private function ctc_enable_rest_api($endpoint_type, $rest_base, $args ) {
 
         if(isset($this->plugin_options[$endpoint_type]) && !empty($this->plugin_options[$endpoint_type])) {
-            error_log('    enabled');
             $args['show_in_rest'] = true;
             $args['rest_base']    = $rest_base;
         } else {
-            error_log('    disabled');
             $args['show_in_rest'] = false;
         }
 
@@ -136,7 +133,7 @@ class Church_Theme_Content_Rest_Api_Public {
      * @since 0.1
      */
     public function ctc_enable_sermon_rest_api( $args ) {
-        return ctc_enable_rest_api('sermon', 'ctc_sermon', $args);
+        return $this->ctc_enable_rest_api('sermon', 'ctc_sermon', $args);
     }
 
     /**********************************
@@ -149,7 +146,7 @@ class Church_Theme_Content_Rest_Api_Public {
      * @since 0.1
      */
     public function ctc_enable_event_rest_api( $args ) {
-        return ctc_enable_rest_api('event', 'ctc_event', $args);
+        return $this->ctc_enable_rest_api('event', 'ctc_event', $args);
     }
 
     /**********************************
@@ -162,7 +159,7 @@ class Church_Theme_Content_Rest_Api_Public {
      * @since 0.1
      */
     public function ctc_enable_location_rest_api( $args ) {
-        return ctc_enable_rest_api('location', 'ctc_location', $args);
+        return $this->ctc_enable_rest_api('location', 'ctc_location', $args);
     }
 
     /**********************************
@@ -175,7 +172,7 @@ class Church_Theme_Content_Rest_Api_Public {
      * @since 0.1
      */
     public function ctc_enable_person_rest_api( $args ) {
-        return ctc_enable_rest_api('person', 'ctc_person', $args);
+        return $this->ctc_enable_rest_api('person', 'ctc_person', $args);
     }
 
 }
