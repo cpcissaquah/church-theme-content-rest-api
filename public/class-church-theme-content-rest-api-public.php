@@ -111,14 +111,10 @@ class Church_Theme_Content_Rest_Api_Public {
      * @since 1.0.0
      */
     private function ctc_enable_rest_api($endpoint_type, $rest_base, $args ) {
-        error_log('Configuring:  ' . $endpoint_type);
-
         if(isset($this->plugin_options[$endpoint_type]) && !empty($this->plugin_options[$endpoint_type])) {
-            error_log('enabled');
             $args['show_in_rest'] = true;
             $args['rest_base']    = $rest_base;
         } else {
-            error_log('disabled');
             $args['show_in_rest'] = false;
         }
 
