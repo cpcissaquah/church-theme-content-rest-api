@@ -130,10 +130,31 @@ class Church_Theme_Content_Rest_Api_Public {
      *
      * @since 1.0.0
      */
-    public function ctc_enable_api( $args ) {
-        //$args['show_in_rest'] = true;
-        //$args['rest_base']    = $rest_base;
-        error_log(print_r($args));
+    private function ctc_enable_api( $rest_base, $args ) {
+        $args['show_in_rest'] = true;
+        $args['rest_base']    = $rest_base;
+    }
+
+    public function ctc_enable_get_feature_data( $args ) {
+        return $this->ctc_enable_api('ctc_get_feature_data', $args);
+    }
+    public function ctc_enable_get_feature_data_by_post_type( $args ) {
+        return $this->ctc_enable_api('ctc_get_feature_data_by_post_type', $args);
+    }
+    public function ctc_enable_get_theme_support( $args ) {
+        return $this->ctc_enable_api('ctc_get_theme_support', $args);
+    }
+    public function ctc_enable_get_theme_support_by_post_type( $args ) {
+        return $this->ctc_enable_api('ctc_get_theme_support_by_post_type', $args);
+    }
+    public function ctc_enable_feature_supported( $args ) {
+        return $this->ctc_enable_api('ctc_feature_supported', $args);
+    }
+    public function ctc_enable_taxonomy_supported( $args ) {
+        return $this->ctc_enable_api('ctc_taxonomy_supported', $args);
+    }
+    public function ctc_enable_field_supported( $args ) {
+        return $this->ctc_enable_api('ctc_field_supported', $args);
     }
 
     /**********************************

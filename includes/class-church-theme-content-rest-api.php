@@ -197,21 +197,13 @@ class Church_Theme_Content_Rest_Api {
         $this->loader->add_filter( 'ctc_taxonomy_person_group_args', $plugin_public, 'ctc_enable_person_group_rest_api' );
 
         // Adding test filters
-        $this->loader->add_filter( 'ctc_get_feature_data', $plugin_public, 'ctc_enable_api' );
-        $this->loader->add_filter( 'ctc_get_feature_data_by_post_type', $plugin_public, 'ctc_enable_api' );
-        $this->loader->add_filter( 'ctc_get_theme_support', $plugin_public, 'ctc_enable_api' );
-        $this->loader->add_filter( 'ctc_get_theme_support_by_post_type', $plugin_public, 'ctc_enable_api' );
-        $this->loader->add_filter( 'ctc_feature_supported', $plugin_public, 'ctc_enable_api' );
-        $this->loader->add_filter( 'ctc_taxonomy_supported', $plugin_public, 'ctc_enable_api' );
-        $this->loader->add_filter( 'ctc_field_supported', $plugin_public, 'ctc_enable_api' );
-
-//        $this->loader->add_filter( 'ctc_get_feature_data', $plugin_public, 'ctc_enable_sermon_rest_api' );
-//        $this->loader->add_filter( 'ctc_get_feature_data_by_post_type', $plugin_public, 'ctc_enable_sermon_rest_api' );
-//        $this->loader->add_filter( 'ctc_get_theme_support', $plugin_public, 'ctc_enable_sermon_rest_api' );
-//        $this->loader->add_filter( 'ctc_get_theme_support_by_post_type', $plugin_public, 'ctc_enable_sermon_rest_api' );
-//        $this->loader->add_filter( 'ctc_feature_supported', $plugin_public, 'ctc_enable_sermon_rest_api' );
-//        $this->loader->add_filter( 'ctc_taxonomy_supported', $plugin_public, 'ctc_enable_sermon_rest_api' );
-//        $this->loader->add_filter( 'ctc_field_supported', $plugin_public, 'ctc_enable_sermon_rest_api' );
+        $this->loader->add_filter( 'ctc_get_feature_data', $plugin_public, 'ctc_enable_get_feature_data' );
+        $this->loader->add_filter( 'ctc_get_feature_data_by_post_type', $plugin_public, 'ctc_enable_get_feature_data_by_post_type' );
+        $this->loader->add_filter( 'ctc_get_theme_support', $plugin_public, 'ctc_enable_get_theme_support' );
+        $this->loader->add_filter( 'ctc_get_theme_support_by_post_type', $plugin_public, 'ctc_enable_get_theme_support_by_post_type' );
+        $this->loader->add_filter( 'ctc_feature_supported', $plugin_public, 'ctc_enable_feature_supported' );
+        $this->loader->add_filter( 'ctc_taxonomy_supported', $plugin_public, 'ctc_enable_taxonomy_supported' );
+        $this->loader->add_filter( 'ctc_field_supported', $plugin_public, 'ctc_enable_field_supported' );
     }
 
     /**
