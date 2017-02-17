@@ -122,6 +122,21 @@ class Church_Theme_Content_Rest_Api_Public {
     }
 
     /**********************************
+     * TEST FUNCTION
+     **********************************/
+
+    /**
+     * Enable REST API for a number of endpoints
+     *
+     * @since 1.0.0
+     */
+    public function ctc_enable_api( $args ) {
+        //$args['show_in_rest'] = true;
+        //$args['rest_base']    = $rest_base;
+        error_log(print_r($args));
+    }
+
+    /**********************************
      * SERMON
      **********************************/
 
